@@ -1,1 +1,1 @@
-# product-list
+# M1 product list module

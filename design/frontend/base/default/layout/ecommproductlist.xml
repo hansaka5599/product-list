@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!--
+    Customer account pages, rendered for all tabs in dashboard
+    -->
+
+    <customer_account>
+        <!-- Mage_Tag -->
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="ecommproductlist">
+                <name>ecommproductlist</name>
+                <path>productlist/list/</path>
+                <label>Product List</label>
+            </action>
+        </reference>
+    </customer_account>
+
+
+    <ecommproductlist_list_index translate="label">
+        <update handle="customer_account"/>
+        <reference name="root">
+            <action method="setHeaderTitle" translate="title" module="customer">
+                <title>My Account</title>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="ecommproductlist/productList" name="ecommproductlist_productlist" template="ecomm/productlist/list.phtml"/>
+        </reference>
+    </ecommproductlist_list_index>
+
+</layout>
